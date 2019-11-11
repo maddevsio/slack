@@ -40,9 +40,11 @@ type GroupRenameEvent struct {
 
 // GroupRenameInfo represents the group info related to the renamed group
 type GroupRenameInfo struct {
-	ID      string `json:"id"`
-	Name    string `json:"name"`
-	Created string `json:"created"`
+	ID             string `json:"id"`
+	Name           string `json:"name"`
+	NameNormalized string `json:"name_normalized"`
+	Created        int64  `json:"created"`
+	IsGroup        bool   `json:"is_group"`
 }
 
 // GroupHistoryChangedEvent represents the Group history changed event
